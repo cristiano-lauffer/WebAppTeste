@@ -1,0 +1,37 @@
+﻿@model List<WebAppTeste.Models.RedesLivresPoa>
+
+@{
+    ViewData["Title"] = "Pontos de acesso de Wi-Fi em Porto Alegre Livre";
+}
+<h3>@ViewData["Title"]</h3>
+
+<div>
+    <hr />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Empresa</th>
+                <th>Site</th>
+                <th>NomeRede</th>
+                <th>Endereco</th>
+                <th>Setor</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{int contatodor = 1;}
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@contatodor</td>
+                    <td>@item.Empresa</td>
+                    <td>@item.Site</td>
+                    <td>@item.NomeRede</td>
+                    <td>@item.Endereco</td>
+                    <td>@item.Setor</td>
+                </tr>
+                contatodor++;
+            }
+        </tbody>
+    </table>
+</div>
